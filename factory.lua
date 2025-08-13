@@ -1,6 +1,6 @@
 -- GPO (648454481)
--- Version: 6d8daca27043e286
--- date: 13/08/2025, 14:00:05
+-- Version: cfe3a47eea3e511f
+-- date: 13/08/2025, 14:39:12
 -- CrashDetection: false
 
 if not game:IsLoaded() then game.Loaded:Wait() end
@@ -38,7 +38,7 @@ local debugMode = not LPH_OBFUSCATED
 local scriptVersion
 local serverConstants = {}
 local sharedRequires = {}
-local ah_metadata = {["games"] = {["66654135"] = "MurderMystery", ["648454481"] = "GPO", ["3110388936"] = "NinjaTime", ["3808223175"] = "Jujutsu", ["4572323622"] = "YBA", ["7436755782"] = "GrowGardem"}, ["version"] = "6d8daca27043e286"}
+local ah_metadata = {["games"] = {["66654135"] = "MurderMystery", ["648454481"] = "GPO", ["3110388936"] = "NinjaTime", ["3808223175"] = "Jujutsu", ["4572323622"] = "YBA", ["7436755782"] = "GrowGardem"}, ["version"] = "cfe3a47eea3e511f"}
 (function()
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	getgenv().protect_gui = protect_gui or protectgui or function() end
@@ -1841,7 +1841,7 @@ local function onScriptError(message, stackTrace, script)
 	local text = ("%s%s\n%s"):format(message:sub(1, 1), message:sub(2), stackTrace)
 	if table.find(seenErrors, text) then return end
 	table.insert(seenErrors, text)
-	local reportMessage = ("`ZeroMax_v_%s\n%s\n\n%s\n%s`"):format('6d8daca27043e286', "(ScriptError)", text, text:lower():find("luraph") and ("(" .. gameName .. "_LuraphError)") or "")
+	local reportMessage = ("`ZeroMax_v_%s\n%s\n\n%s\n%s`"):format('cfe3a47eea3e511f', "(ScriptError)", text, text:lower():find("luraph") and ("(" .. gameName .. "_LuraphError)") or "")
 	errorAnalytics:Report(gameName, reportMessage, threadId)
 end
 local con = ScriptContext.ErrorDetailed:Connect(onScriptError)
@@ -3090,7 +3090,7 @@ if (gameName == 'GPO') then
 					while true do
 						task.wait()
 						local closestMob, closestMobDistance = GPOUtils:getClosestEnemy2()
-	                    TweenAdvanced.Config.Speed = 150
+	                    TweenAdvanced.Config.Speed = 80
 						if not closestMob or closestMobDistance > 500 or utils:GetMagnitudeFromCharacter(Vector3.new(1782.06982421875, 136.49999237060547, -10841.4345703125)) > 1000 then
 								TweenAdvanced:Tween(Vector3.new(1782.06982421875, 136.49999237060547, -10841.4345703125), true, true)
 							continue
